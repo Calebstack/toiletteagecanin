@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Toilettage comportemental pour chiens et chats à Marche-en-Famenne. Un travail soigné, dans le respect de votre compagnon.">
   <title>Toilettage Canin Félin | Marche-en-Famenne</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet">
@@ -91,6 +92,55 @@
       .footer-social { min-width: 0; }
       .footer-contact { min-width: 0; font-size: 10px; }
     }
+    html { scroll-padding-top: 116px; }
+    body { background-image: radial-gradient(circle at 12% 9%, rgba(54,200,232,.08) 0 1px, transparent 1px), radial-gradient(circle at 86% 42%, rgba(240,140,112,.07) 0 1px, transparent 1px); background-size: 28px 28px, 36px 36px; }
+    .site-header { transition: height .35s ease, box-shadow .35s ease, background .35s ease; }
+    .site-header.is-scrolled { height: 82px; background: rgba(255,253,248,.95); box-shadow: 0 10px 30px rgba(16,45,90,.12); backdrop-filter: blur(14px); }
+    .site-header.is-scrolled .brand img { width: 48px; height: 48px; }
+    .site-header.is-scrolled .header-call { box-shadow: 3px 3px 0 var(--coral); }
+    .main-nav a.is-active { color: white; background: var(--blue); }
+    .hero-copy > *, .hero-art > *, .approach > *, .gallery-heading > *, .contact > *, .footer-top > * { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+    .hero.is-visible .hero-copy > *, .hero.is-visible .hero-art > *, .approach.is-visible > *, .gallery.is-visible .gallery-heading > *, .contact.is-visible > *, .site-footer.is-visible .footer-top > * { opacity: 1; transform: translateY(0); }
+    .hero-copy > *:nth-child(2) { transition-delay: .1s; }
+    .hero-copy > *:nth-child(3) { transition-delay: .18s; }
+    .hero-copy > *:nth-child(4) { transition-delay: .26s; }
+    .hero-copy > *:nth-child(5) { transition-delay: .34s; }
+    .hero-art .hero-image { transition-delay: .12s; }
+    .hero-art .hero-sticker { transition-delay: .3s; }
+    .approach-content, .approach-photo { transition-delay: .12s; }
+    .approach .values > div { transition: transform .25s ease, color .25s ease; }
+    .approach .values > div:hover { transform: translateY(-5px); }
+    .value-icon { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 50%; background: #fff3ed; }
+    .gallery-heading, .contact-intro, .contact-form { transition: transform .3s ease; }
+    .contact-form:hover { transform: translateY(-5px); }
+    figure { transition: transform .35s ease; }
+    figure:hover { transform: translateY(-7px) rotate(-1deg); }
+    .hero-image img, .approach-photo img { transition: transform .7s cubic-bezier(.2,.8,.2,1), filter .4s ease; }
+    .hero-image:hover img { transform: rotate(-5deg) scale(1.16); }
+    .approach-photo:hover img { filter: saturate(1.08); transform: scale(1.04); }
+    .footer-social > .footer-contact { display: flex; }
+    .footer-social { min-width: 210px; }
+    .footer-social strong { margin-bottom: 0; }
+    .footer-contact { margin-top: 6px; }
+    body { background-color: var(--cream); background-image: radial-gradient(circle at 8% 12%, rgba(54,200,232,.12), transparent 22%), radial-gradient(circle at 92% 32%, rgba(240,140,112,.11), transparent 24%), linear-gradient(135deg, rgba(255,255,255,.22), transparent 48%); background-attachment: fixed; }
+    .hero:before, .contact:before { content: ''; position: absolute; pointer-events: none; border-radius: 50%; filter: blur(1px); opacity: .7; }
+    .hero:before { width: 330px; height: 330px; top: 5%; left: 42%; background: radial-gradient(circle, rgba(54,200,232,.12), transparent 68%); }
+    .contact:before { width: 420px; height: 420px; right: 3%; top: 18%; background: radial-gradient(circle, rgba(240,140,112,.1), transparent 68%); }
+    .main-nav { transition: opacity .28s ease, transform .28s ease, visibility .28s ease; }
+    @media (max-width: 1000px) {
+      .site-header { height: 82px; }
+      .main-nav { display: flex; position: absolute; top: 82px; left: 18px; right: 18px; margin: 0; padding: 10px; flex-direction: column; align-items: stretch; gap: 4px; opacity: 0; visibility: hidden; transform: translateY(-12px) scale(.98); pointer-events: none; box-shadow: 0 16px 34px rgba(16,45,90,.14); }
+      .main-nav.is-open { opacity: 1; visibility: visible; transform: translateY(0) scale(1); pointer-events: auto; }
+      .main-nav a { text-align: center; }
+      .header-call { display: none; }
+      .menu-toggle { display: block; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-social { grid-column: 1 / -1; padding-top: 10px; border-top: 1px solid #31506a; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *:before, *:after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .hero-copy > *, .hero-art > *, .approach > *, .gallery-heading > *, .contact > *, .footer-top > * { opacity: 1; transform: none; }
+    }
   </style>
 </head>
 <body>
@@ -172,7 +222,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="#accueil"><img src="assets/images/logo.png" alt="Toilettage Canin Félin"><span>Toilettage<br><em>Canin Félin</em></span></a><p>Le soin juste, pour<br>des compagnons heureux.</p><div class="footer-links"><strong>Navigation</strong><a href="#notre-approche">Notre approche</a><a href="#galerie">La galerie</a><a href="#contact">Nous contacter</a></div><div class="footer-social"><strong>Suivez-nous</strong><div><a href="https://www.facebook.com/profile.php?id=100063478633270" target="_blank" rel="noreferrer" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="mailto:corinevoue@gmail.com" aria-label="E-mail"><i data-lucide="mail"></i></a></div><div class="footer-contact"><a href="tel:+32476769259"><i data-lucide="phone"></i>+32 476 76 92 59</a><a href="mailto:corinevoue@gmail.com"><i data-lucide="mail"></i>corinevoue@gmail.com</a></div></div></div><div class="footer-bottom"><span>© 2024 Toilettage Canin Félin</span><span>Fait avec soin à Marche</span><a href="#accueil" aria-label="Retour en haut"><i data-lucide="arrow-up"></i></a></div></footer>
+  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="#accueil"><img src="assets/images/logo.png" alt="Toilettage Canin Félin"><span>Toilettage<br><em>Canin Félin</em></span></a><p>Le soin juste, pour<br>des compagnons heureux.</p><div class="footer-links"><strong>Navigation</strong><a href="#notre-approche">Notre approche</a><a href="#galerie">La galerie</a><a href="#contact">Nous contacter</a></div><div class="footer-social"><strong>Contact</strong><div class="footer-contact"><a href="tel:+32476769259"><i data-lucide="phone"></i>+32 476 76 92 59</a><a href="mailto:corinevoue@gmail.com"><i data-lucide="mail"></i>corinevoue@gmail.com</a></div></div></div><div class="footer-bottom"><span>© 2024 Toilettage Canin Félin</span><span>Fait avec soin à Marche</span><a href="#accueil" aria-label="Retour en haut"><i data-lucide="arrow-up"></i></a></div></footer>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="assets/js/main.js"></script>
 </body>

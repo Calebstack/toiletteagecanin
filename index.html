@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Toilettage comportemental pour chiens et chats à Marche-en-Famenne. Un travail soigné, dans le respect de votre compagnon.">
+  <title>Toilettage Canin Félin | Marche-en-Famenne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    @media (max-width: 800px) {
+      .main-nav.is-open { display: flex; position: absolute; top: 74px; left: 0; right: 0; margin: 0; padding: 22px 24px; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; gap: 20px; box-shadow: 0 12px 25px rgba(16,45,90,.08); }
+    }
+    .site-header { height: 104px; background: var(--paper); box-shadow: 0 4px 24px rgba(16,45,90,.06); }
+    .brand { gap: 13px; font-size: 15px; letter-spacing: .2px; text-transform: uppercase; }
+    .brand img { width: 58px; height: 58px; border-radius: 18px; box-shadow: 5px 5px 0 var(--cyan); }
+    .brand span { position: relative; padding-left: 3px; }
+    .brand span:after { content: 'Toilettage comportemental'; display: block; margin-top: 7px; color: #78909a; font-size: 8px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; }
+    .main-nav { align-items: center; gap: 8px; margin-right: 34px; padding: 5px; border: 1px solid #dce7e3; border-radius: 40px; background: #f5faf7; }
+    .main-nav a { padding: 11px 16px; border-radius: 26px; font-size: 12px; font-weight: 700; color: #45647b; transition: .2s ease; }
+    .main-nav a:hover { color: white; background: var(--blue); }
+    .main-nav a:after { display: none; }
+    .header-call { padding: 14px 20px; background: var(--ink); color: white; border: 0; box-shadow: 5px 5px 0 var(--coral); transition: transform .2s; }
+    .header-call:hover { transform: translate(-2px,-2px); }
+    .hero { min-height: calc(100vh - 104px); padding-top: 78px; }
+    .hero-copy { max-width: 560px; }
+    .hero h1 { font-size: clamp(60px,7.3vw,112px); line-height: .9; text-wrap: balance; }
+    .hero-intro { max-width: 410px; font-size: 17px; line-height: 1.7; color: #466b80; }
+    .button { padding: 17px 22px; box-shadow: 5px 5px 0 var(--cyan); transition: transform .2s, box-shadow .2s, background .2s; }
+    .button-primary:hover, .button-dark:hover { box-shadow: 2px 2px 0 var(--cyan); }
+    .hero-note { margin-top: 54px; padding-top: 17px; border-top: 1px solid #d6e2df; max-width: 325px; }
+    .mini-avatars span { background: white; box-shadow: 0 2px 7px rgba(16,45,90,.08); }
+    .approach { grid-template-columns: 18% 47% 35%; align-items: center; }
+    .approach { grid-template-columns: minmax(0, 1fr) minmax(320px, 420px); column-gap: clamp(35px, 7vw, 100px); row-gap: 28px; }
+    .approach > .section-label { grid-column: 1 / -1; align-self: auto; padding: 0; text-align: center; justify-self: center; position: relative; }
+    .approach > .section-label:after { content: ''; display: block; width: 42px; height: 3px; margin: 12px auto 0; background: var(--coral); transform: skew(-20deg); }
+    .approach-content { text-align: center; padding-right: 0; }
+    .approach-content .kicker { display: inline-block; padding: 8px 13px; border: 1px solid #bde1df; border-radius: 30px; background: #ecf8f3; }
+    .approach-content h2 { margin: 20px 0 24px; }
+    .approach-content .body-copy { margin: 0 auto; font-size: 15px; }
+    .values { text-align: left; }
+    .approach-photo { height: 465px; margin-left: 12px; transform: rotate(2deg); }
+    .approach-photo img { border-radius: 4px; }
+    .photo-caption { box-shadow: 5px 5px 0 var(--ink); }
+    .gallery { position: relative; }
+    .gallery:before, .gallery:after { content: '✦'; position: absolute; color: var(--coral); font-size: 44px; opacity: .65; }
+    .gallery:before { top: 72px; left: 6%; transform: rotate(15deg); }
+    .gallery:after { right: 7%; bottom: 80px; transform: rotate(-18deg); }
+    .gallery-heading { align-items: start; padding-bottom: 72px; }
+    .gallery-heading > div { position: relative; }
+    .gallery-heading h2 { margin-top: 23px; }
+    .gallery-heading h2:after { content: ''; display: block; width: 76px; height: 5px; margin-top: 19px; background: var(--coral); transform: skew(-20deg); }
+    .gallery-description { margin-top: 54px; padding-left: 20px; border-left: 2px solid var(--coral); line-height: 1.8; }
+    .marquee { margin: 18px 0; }
+    figure img { border-radius: 8px; box-shadow: 7px 7px 0 rgba(16,45,90,.08); }
+    .contact { background: linear-gradient(110deg, #f7f5ee 0%, #f7f5ee 62%, #e4f4ef 62%); max-width: none; padding-left: max(30px, calc((100% - 1180px)/2)); padding-right: max(30px, calc((100% - 1180px)/2)); }
+    .contact-details { gap: 16px; }
+    .contact-details a { min-height: 24px; white-space: nowrap; }
+    .contact-details svg { flex: 0 0 20px; width: 20px; height: 20px; stroke-width: 2; }
+    .contact-intro h2 { margin-top: 22px; }
+    .contact-form { border-top: 5px solid var(--coral); border-radius: 4px; box-shadow: 12px 14px 0 rgba(16,45,90,.1); }
+    .form-heading { border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+    .form-heading span { color: var(--blue); }
+    .contact-form input, .contact-form textarea { background: #fbfcf8; border: 1px solid #dce5e1; border-radius: 3px; padding: 13px 14px; }
+    .contact-form textarea { min-height: 112px; }
+    .contact-form input:focus, .contact-form textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #36c8e82b; }
+    .contact-form .button { width: 100%; justify-content: center; }
+    .map-wrap { border: 8px solid white; box-shadow: 0 8px 24px rgba(16,45,90,.12); }
+    .site-footer { padding-top: 76px; }
+    .footer-top { grid-template-columns: 2fr 1.4fr 1.2fr 1.1fr; }
+    .footer-brand img { box-shadow: 4px 4px 0 var(--cyan); }
+    .footer-top > p { color: #e9f5f2; }
+    .footer-links a, .footer-social a { transition: color .2s, border-color .2s; }
+    .footer-links a:hover { color: white; }
+    .footer-contact { display: flex; flex-direction: column; gap: 10px; margin-top: 19px; color: #9eb9bf; font-size: 12px; min-width: 190px; }
+    .footer-contact a { display: flex; align-items: center; gap: 8px; width: auto; height: auto; border: 0; border-radius: 0; white-space: nowrap; }
+    .footer-contact svg { flex: 0 0 15px; width: 15px; height: 15px; color: var(--cyan); }
+    @media (max-width: 800px) {
+      .site-header { height: 82px; }
+      .brand img { width: 48px; height: 48px; }
+      .brand span:after { display: none; }
+      .hero { min-height: auto; padding-top: 48px; }
+      .approach-content { padding-right: 0; }
+      .approach { display: block; }
+      .approach > .section-label { margin-bottom: 28px; }
+      .approach-photo { transform: none; }
+      .contact { background: var(--cream); padding-left: 24px; padding-right: 24px; }
+      .contact-form { box-shadow: 7px 8px 0 rgba(16,45,90,.1); }
+      .footer-social { min-width: 0; }
+      .footer-contact { min-width: 0; font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Toilettage Canin Félin, accueil">
+      <img src="assets/images/logo.png" alt="Toilettage Canin Félin">
+      <span>Toilettage<br><em>Canin Félin</em></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="#notre-approche">Notre approche</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-call" href="tel:+32476769259"><span class="call-dot"></span> Prendre rendez-vous</a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Marche-en-Famenne · Belgique</p>
+        <h1>Le toilettage<br><em>qui fait du bien.</em></h1>
+        <p class="hero-intro">Un moment de douceur, de confiance et de soin pour votre compagnon à quatre pattes.</p>
+        <a class="button button-primary" href="#contact">Réserver un moment <i data-lucide="arrow-up-right"></i></a>
+        <div class="hero-note"><div class="mini-avatars"><span>🐶</span><span>🐱</span><span>♥</span></div><p><strong>Chaque animal est unique.</strong><br>Notre méthode aussi.</p></div>
+      </div>
+      <div class="hero-art">
+        <div class="art-ring"></div>
+        <div class="hero-image"><img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1000&q=85" alt="Chien heureux après son toilettage"></div>
+        <div class="hero-sticker"><span>Des soins</span><strong>avec<br>du cœur</strong><i data-lucide="heart"></i></div>
+        <span class="scribble">✦</span>
+      </div>
+    </section>
+
+    <section class="approach section-grid" id="notre-approche">
+      <div class="section-label">01 / Notre approche</div>
+      <div class="approach-content">
+        <p class="kicker">Toilettage comportemental</p>
+        <h2>Une belle coupe,<br><em>un animal serein.</em></h2>
+        <p class="body-copy">Ici, on prend le temps. Chaque séance s'adapte au tempérament, aux besoins et au rythme de votre chien ou de votre chat. Le résultat est soigné, mais le bien-être passe toujours en premier.</p>
+        <div class="values">
+          <div><span class="value-icon"><i data-lucide="sparkles"></i></span><strong>À l'écoute</strong><small>Du caractère de chacun</small></div>
+          <div><span class="value-icon"><i data-lucide="hand-heart"></i></span><strong>En douceur</strong><small>Sans précipitation</small></div>
+          <div><span class="value-icon"><i data-lucide="scissors"></i></span><strong>Avec soin</strong><small>Un travail précis</small></div>
+        </div>
+      </div>
+      <div class="approach-photo"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=85" alt="Chien assis dans un intérieur lumineux"><span class="photo-caption">Le calme avant<br>la beauté.</span></div>
+    </section>
+
+    <section class="gallery" id="galerie">
+      <div class="gallery-heading"><div><p class="section-label">02 / Quelques museaux</p><h2>Ils sont repartis<br><em>tout beaux.</em></h2></div><p class="gallery-description">Des bouilles, des personnalités et beaucoup de douceur. Faites défiler nos derniers petits clients.</p></div>
+      <div class="marquee marquee-left"><div class="marquee-track">
+        <figure><img src="assets/images/800642776_1698408402285098_3020006243147979601_n.jpg" alt="Chien toiletté 01"></figure>
+        <figure><img src="assets/images/795644150_1693659619426643_6801660344497903531_n.jpg" alt="Chien toiletté 02"></figure>
+        <figure><img src="assets/images/788860623_1687992653326673_1556375567235270187_n.jpg" alt="Chien toiletté 03"></figure>
+        <figure><img src="assets/images/788259415_1684747936984478_954593802123968871_n.jpg" alt="Chien toiletté 04"></figure>
+        <figure><img src="assets/images/787021420_1684747866984485_8806759232371977342_n.jpg" alt="Chien toiletté 05"></figure>
+      </div></div>
+      <div class="marquee marquee-right"><div class="marquee-track">
+        <figure><img src="assets/images/786927655_1684747890317816_4353172855971332744_n.jpg" alt="Chien toiletté 06"></figure>
+        <figure><img src="assets/images/786562076_1684747826984489_5052143303206201030_n.jpg" alt="Chien toiletté 07"></figure>
+        <figure><img src="assets/images/786139545_1684747956984476_8078686690362129854_n.jpg" alt="Chien toiletté 08"></figure>
+        <figure><img src="assets/images/785600020_1684746363651302_343039253166315636_n.jpg" alt="Chien toiletté 09"></figure>
+        <figure><img src="assets/images/772725919_1669994115126527_1606667797945394738_n.jpg" alt="Chien toiletté 10"></figure>
+      </div></div>
+      <div class="marquee marquee-left"><div class="marquee-track">
+        <figure><img src="assets/images/772613325_1671506208308651_4188325714688736781_n.jpg" alt="Chien toiletté 11"></figure>
+        <figure><img src="assets/images/770802026_1671506171641988_5388366856937210695_n.jpg" alt="Chien toiletté 12"></figure>
+        <figure><img src="assets/images/763722505_1660806812711924_6614843760233199056_n.jpg" alt="Chien toiletté 13"></figure>
+        <figure><img src="assets/images/763080597_1660807172711888_1450182836056921328_n.jpg" alt="Chien toiletté 14"></figure>
+        <figure><img src="assets/images/761545999_1660807072711898_3190662610834125581_n.jpg" alt="Chien toiletté 15"></figure>
+      </div></div>
+    </section>
+
+    <section class="contact section-grid" id="contact">
+      <div class="contact-intro"><p class="section-label">03 / Parlons-en</p><h2>Le prochain<br><em>c'est le vôtre ?</em></h2><p class="body-copy">Une question, une première rencontre ou simplement envie d'échanger ? Écrivez-nous, nous vous répondrons avec plaisir.</p><div class="contact-details"><a href="tel:+32476769259"><i data-lucide="phone"></i><span>+32 476 76 92 59</span></a><a href="mailto:corinevoue@gmail.com"><i data-lucide="mail"></i><span>corinevoue@gmail.com</span></a><a href="https://maps.google.com/?q=Marche,+Belgique,+6900" target="_blank" rel="noreferrer"><i data-lucide="map-pin"></i><span>Marche, Belgique · 6900</span></a></div></div>
+      <form class="contact-form" action="mailto:corinevoue@gmail.com" method="post" enctype="text/plain"><img src="assets/images/logo.png" alt="" class="form-logo"><div class="form-heading"><span>Bonjour !</span><p>Les champs marqués d'un * sont obligatoires.</p></div><label for="name">Votre prénom et nom *</label><input id="name" name="Nom" type="text" placeholder="Ex. Camille Dupont" required><label for="email">Votre adresse e-mail *</label><input id="email" name="Email" type="email" placeholder="vous@exemple.be" required><label for="message">Votre message *</label><textarea id="message" name="Message" rows="4" placeholder="Parlez-nous de votre compagnon..." required></textarea><button class="button button-dark" type="submit">Envoyer le message <i data-lucide="send"></i></button></form>
+      <div class="map-wrap"><iframe title="Localisation à Marche, Belgique" src="https://www.openstreetmap.org/export/embed.html?bbox=5.28%2C50.20%2C5.38%2C50.25&layer=mapnik&marker=50.226%2C5.343" loading="lazy"></iframe><a class="map-label" href="https://maps.google.com/?q=Marche,+Belgique,+6900" target="_blank" rel="noreferrer"><i data-lucide="map-pin"></i><span><strong>Nous trouver</strong><small>Marche-en-Famenne</small></span><i data-lucide="arrow-up-right"></i></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="#accueil"><img src="assets/images/logo.png" alt="Toilettage Canin Félin"><span>Toilettage<br><em>Canin Félin</em></span></a><p>Le soin juste, pour<br>des compagnons heureux.</p><div class="footer-links"><strong>Navigation</strong><a href="#notre-approche">Notre approche</a><a href="#galerie">La galerie</a><a href="#contact">Nous contacter</a></div><div class="footer-social"><strong>Suivez-nous</strong><div><a href="https://www.facebook.com/profile.php?id=100063478633270" target="_blank" rel="noreferrer" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="mailto:corinevoue@gmail.com" aria-label="E-mail"><i data-lucide="mail"></i></a></div><div class="footer-contact"><a href="tel:+32476769259"><i data-lucide="phone"></i>+32 476 76 92 59</a><a href="mailto:corinevoue@gmail.com"><i data-lucide="mail"></i>corinevoue@gmail.com</a></div></div></div><div class="footer-bottom"><span>© 2024 Toilettage Canin Félin</span><span>Fait avec soin à Marche</span><a href="#accueil" aria-label="Retour en haut"><i data-lucide="arrow-up"></i></a></div></footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
